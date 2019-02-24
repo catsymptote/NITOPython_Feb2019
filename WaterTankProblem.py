@@ -22,7 +22,6 @@ def v(y):
     return math.sqrt(2*g*(h - y))
 
 
-
 def t(y):
     """
     Time function.
@@ -32,7 +31,6 @@ def t(y):
     t = sqrt(2d/g)
     """
     return math.sqrt(2*y/g)
-
 
 
 def d(y):
@@ -60,9 +58,11 @@ for i in range(len(x)):
     if fx > fx_max:
         x_max = x[i]
         fx_max = fx
+ 
 
 # Print optimal point and its respective distance.
 print(x_max, "|", round(fx_max, 2))
+
 
 # Plot function
 plt.plot(x, f)#, [0, 9], [9, 9])
