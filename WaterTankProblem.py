@@ -17,24 +17,30 @@ h = 9
 g = 9.81
 
 
-# Velocity function.
 def v(y):
+    """ Velocity function. """
     return math.sqrt(2*g*(h - y))
 
 
-# Time function.
-# d = vt + 1/2 at^2
-# d = 1/2 at^2
-# t^2 = 2d/g
-# t = sqrt(2d/g)
+
 def t(y):
+    """
+    Time function.
+    d = vt + 1/2 at^2
+    d = 1/2 at^2
+    t^2 = 2d/g
+    t = sqrt(2d/g)
+    """
     return math.sqrt(2*y/g)
 
 
-# Distance function.
-# d = vt + at^2
-# d = vt
+
 def d(y):
+    """
+    Distance function.
+    d = vt + 1/2 at^2
+    d = vt
+    """
     return v(y) * t(y)
 
 
@@ -56,7 +62,7 @@ for i in range(len(x)):
         fx_max = fx
 
 # Print optimal point and its respective distance.
-print(x_max, round(fx_max, 2))
+print(x_max, "|", round(fx_max, 2))
 
 # Plot function
 plt.plot(x, f)#, [0, 9], [9, 9])
